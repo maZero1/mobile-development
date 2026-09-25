@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppUsuarios.Views.UserDetailPage"
+             Title="Detalhes">
+
+    <Grid RowDefinitions="Auto, *" Padding="30">
+
+        <!-- Logo HBM menorzinha no topo -->
+        <Image Grid.Row="0"
+               Source="logohbm.jpg" 
+               WidthRequest="280" 
+               HeightRequest="280"
+               Aspect="AspectFit"
+               HorizontalOptions="Center"
+               Margin="0, 0, 0, 30" />
+
+        <!-- Card azul com as informações do usuário -->
+        <Border Grid.Row="1"
+                BackgroundColor="#0A79DF"
+                Stroke="#000000"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 20"
+                Padding="25"
+                VerticalOptions="Start">
+
+            <VerticalStackLayout Spacing="25">
+                <Label Text="{Binding Name, StringFormat='NOME: {0}'}" 
+                       FontSize="22" 
+                       FontAttributes="Bold" 
+                       TextColor="White" />
+
+                <Label Text="{Binding Email, StringFormat='EMAIL: {0}'}" 
+                       FontSize="22" 
+                       FontAttributes="Bold"
+                       TextColor="White" />
+
+                <Label Text="{Binding Phone, StringFormat='TELEFONE: {0}'}" 
+                       FontSize="22" 
+                       FontAttributes="Bold"
+                       TextColor="White" />
+            </VerticalStackLayout>
+        </Border>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MauiAppUsuarios.Models"
+             x:Class="MauiAppUsuarios.Views.UsersListPage"
+             Title="Usuários">
+
+    <Grid>
+        <!-- Bolinha carregamento -->
+        <ActivityIndicator IsRunning="{Binding IsBusy}"
+                           IsVisible="{Binding IsBusy}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Color="#90CAF9" />
+
+        <!-- Puxando a lista de usuários -->
+        <CollectionView ItemsSource="{Binding Usuarios}" SelectionMode="Single" SelectionChanged="AoClicarNoUsuario">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:User">
+
+                    <Border Margin="20, 10"
+                            Stroke="#000000"
+                            StrokeThickness="2"
+                            StrokeShape="RoundRectangle 8"
+                            BackgroundColor="#007BFF"
+                            Padding="15">
+
+                        <Label Text="{Binding Name}" 
+                               FontSize="20" 
+                               TextColor="White" 
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center" />
+                    </Border>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+
+</ContentPage>
