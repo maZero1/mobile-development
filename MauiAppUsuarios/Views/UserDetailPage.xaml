@@ -17,8 +17,8 @@
 
         <!-- Card azul com as informações do usuário -->
         <Border Grid.Row="1"
-                BackgroundColor="#0A79DF"
-                Stroke="#000000"
+                BackgroundColor="{StaticResource AzulHbm}"
+                Stroke="{StaticResource Black}"
                 StrokeThickness="2"
                 StrokeShape="RoundRectangle 20"
                 Padding="25"

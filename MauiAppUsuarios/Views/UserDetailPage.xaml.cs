@@ -1,8 +1,9 @@
 namespace MauiAppUsuarios.Views;
 
-[QueryProperty(nameof(Usuario), "UsuarioSelecionado")]
+[QueryProperty(nameof(Usuario), ChaveUsuario)]
 public partial class UserDetailPage : ContentPage
 {
+    public const string ChaveUsuario = "UsuarioSelecionado";
     private Models.User _usuario;
 
     public Models.User Usuario

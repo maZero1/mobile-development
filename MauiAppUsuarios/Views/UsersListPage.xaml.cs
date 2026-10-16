@@ -31,11 +31,11 @@ public partial class UsersListPage : ContentPage
             // Cria um "pacote" com o usuário clicado para enviar para a tela de detalhes
             var parametros = new Dictionary<string, object>
             {
-                { "UsuarioSelecionado", usuarioClicado }
+                { UserDetailPage.ChaveUsuario, usuarioClicado }
             };
 
             // Manda o aplicativo navegar para a terceira tela, levando o pacote junto
-            await Shell.Current.GoToAsync("UserDetailPage", parametros);
+            await Shell.Current.GoToAsync(nameof(UserDetailPage), parametros);
 
             // Tira a marcação visual de "selecionado" da lista
             ((CollectionView)sender).SelectedItem = null;

@@ -8,8 +8,8 @@ namespace MauiAppUsuarios
         {
             InitializeComponent();
 
-            Routing.RegisterRoute("UsersListPage", typeof(UsersListPage));
-            Routing.RegisterRoute("UserDetailPage", typeof(UserDetailPage));
+            Routing.RegisterRoute(nameof(UsersListPage), typeof(UsersListPage));
+            Routing.RegisterRoute(nameof(UserDetailPage), typeof(UserDetailPage));
         }
     }
 }

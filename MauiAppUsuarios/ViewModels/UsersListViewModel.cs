@@ -25,11 +25,11 @@ public partial class UsersListViewModel : ObservableObject
     [RelayCommand]
     public async Task CarregarUsuariosAsync()
     {
-        if (IsBusy) return; 
+        if (IsBusy) return;
 
         try
         {
-            IsBusy = true; 
+            IsBusy = true;
 
             var listaDaApi = await _apiService.GetUsersAsync();
 
@@ -39,9 +39,13 @@ public partial class UsersListViewModel : ObservableObject
                 Usuarios.Add(user);
             }
         }
+        catch (Exception)
+        {
+            await Shell.Current.DisplayAlertAsync("Erro", "Não foi possível carregar os usuários.", "OK");
+        }
         finally
         {
-            IsBusy = false; 
+            IsBusy = false;
         }
     }
 }

@@ -22,7 +22,7 @@
                             Stroke="#000000"
                             StrokeThickness="2"
                             StrokeShape="RoundRectangle 8"
-                            BackgroundColor="#007BFF"
+                            BackgroundColor="{StaticResource AzulHbm}"
                             Padding="15">
 
                         <Label Text="{Binding Name}" 

@@ -1,4 +1,6 @@
-﻿namespace MauiAppUsuarios;
+﻿using MauiAppUsuarios.Views;
+
+namespace MauiAppUsuarios;
 
 public partial class MainPage : ContentPage
 {
@@ -9,6 +11,6 @@ public partial class MainPage : ContentPage
 
     private async void AoClicarNoBotaoCarregar(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("UsersListPage");
+        await Shell.Current.GoToAsync(nameof(UsersListPage));
     }
 }
