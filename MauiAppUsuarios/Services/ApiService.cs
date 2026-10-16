@@ -10,6 +10,7 @@ public class ApiService
     public ApiService()
     {
         _httpClient = new HttpClient();
+        _httpClient.Timeout = TimeSpan.FromSeconds(5);
     }
 
     public async Task<List<User>> GetUsersAsync()
