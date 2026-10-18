@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Radar - guia de cores</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+<header class="hero">
+  <svg class="aneis" viewBox="0 0 240 240" aria-hidden="true">
+    <g fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.5">
+      <circle cx="120" cy="120" r="40"/><circle cx="120" cy="120" r="80"/><circle cx="120" cy="120" r="118"/>
+    </g>
+    <g stroke="#fff" stroke-width="2.5">
+      <circle cx="62" cy="70" r="8" fill="#DC2626"/>
+      <circle cx="170" cy="96" r="8" fill="#F59E0B"/>
+      <circle cx="128" cy="176" r="8" fill="#16A34A"/>
+    </g>
+  </svg>
+  <h1>Radar</h1>
+  <p>Guia de cores do organizador de estudos. Toque em uma cor para copiar o código.</p>
+</header>
+
+<main>
+  <section>
+    <h2>Cores do tema</h2>
+    <ul id="cores" class="bandas"></ul>
+  </section>
+
+  <section>
+    <h2>Status das tarefas</h2>
+    <p class="nota">Mostre sempre o nome do status junto da cor, para quem não distingue vermelho de verde.</p>
+    <ul id="status" class="lista"></ul>
+  </section>
+
+  <section>
+    <h2>Cores das disciplinas</h2>
+    <p class="nota">O usuário escolhe uma delas ao cadastrar a disciplina.</p>
+    <div id="disc" class="disc"></div>
+  </section>
+
+  <section>
+    <h2>Exemplo de lista de tarefas</h2>
+    <ul class="exemplo">
+      <li style="--faixa:#EF4444"><b>Entrega do projeto</b><span><i style="background:#DC2626"></i>Atrasada, ontem às 23:59</span></li>
+      <li style="--faixa:#3B82F6"><b>Prova de Estruturas de Dados</b><span><i style="background:#F59E0B"></i>Pendente, sexta às 08:00</span></li>
+      <li style="--faixa:#14B8A6"><b>Lista de exercícios</b><span><i style="background:#16A34A"></i>Concluída</span></li>
+    </ul>
+    <p class="nota">A faixa da esquerda é a cor da disciplina, e o ponto é a cor do status.</p>
+  </section>
+
+  <section>
+    <h2>colors.xml</h2>
+    <p class="nota">Cole em res/values/colors.xml no Android Studio.</p>
+    <pre id="xml"></pre>
+    <button id="copiar-xml" class="botao">Copiar colors.xml</button>
+  </section>
+</main>
+
+</div>
+<div id="aviso" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
