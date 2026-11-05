@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aba_painel">Painel</string>
+    <string name="aba_disciplinas">Disciplinas</string>
+    <string name="aba_tarefas">Tarefas</string>
+    <string name="aba_ajustes">Ajustes</string>
+</resources>
